@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background-color: white;
+  padding: 8px;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  mix-blend-mode: multiply;
+  height: 80px;
+  width: auto;
+  margin-right: 16px;
+  margin-left: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-icon {
+  cursor: pointer;
+  color: black;
 }
+
+.menu-icon svg {
+  font-size: 24px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 64px; 
+  right: 16px;
+  background-color: black;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.menu-list.show-dropdowns {
+  opacity: 1;
+  pointer-events: auto;
+} 
